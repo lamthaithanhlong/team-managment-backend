@@ -1,7 +1,7 @@
 <%@page contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@page import="guest.*"%>
+<%@page import="systemmanagment.*"%>
  
-<jsp:useBean id="guestDao" type="guest.GuestDao" scope="request" />
+<jsp:useBean id="systemDao" type="systemmanagment.SystemDao" scope="request" />
  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
@@ -18,8 +18,8 @@
         </form>
  
         <hr><ol> 
-        <% for (Guest guest : guestDao.getAllGuests()) { %>
-            <li> <%= guest %> </li>
+        <% for (SystemEntity systemmanagment : systemDao.getAllGuests()) { %>
+            <li> <%= systemDao %> </li>
         <% } %>
         </ol><hr>
  

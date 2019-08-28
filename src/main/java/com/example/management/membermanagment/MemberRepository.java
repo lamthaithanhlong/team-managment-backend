@@ -8,4 +8,7 @@ import java.util.List;
 @Repository
 public interface MemberRepository extends JpaRepository<MemberEntity, Long> {
     List<MemberEntity> findAll();
+
+    @Override
+    <S extends MemberEntity> S save(S s);
 }

@@ -12,6 +12,8 @@
     <title>Welcome</title>
     <link rel="stylesheet" type="text/css"
           href="${pageContext.request.contextPath}/static/css/style.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${pageContext.request.contextPath}/static/css/style.css"/>
 </head>
 <body>
 
@@ -48,13 +50,6 @@
         </div>
     </div>
 </nav>
-<h1>Welcome</h1>
-<h2>${message}</h2>
-
-
-
-<a href="${pageContext.request.contextPath}/personList">Person List</a>
-<a href="${pageContext.request.contextPath}/login">Login</a>
 
 </body>
 

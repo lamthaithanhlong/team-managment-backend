@@ -17,9 +17,11 @@ public class MemberController {
     private MemberService memberService;
 
     @GetMapping
-    public ResponseEntity<?> getMember() {
+    public ResponseEntity getMember() {
+
+        List<MemberEntity> memberEntity = memberService.getMembers();
         if(memberService.getMembers() != null)
-            return new ResponseEntity<>(memberService.getMembers(), HttpStatus.OK);
+            return ResponseEntity.ok(memberEntity);
         else
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
     }

@@ -1,22 +1,21 @@
-package com.example.management.person;
+package com.example.management.system;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.management.person.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class MainController {
+public class SystemController {
 
-    private static List<Person> persons = new ArrayList<Person>();
+    private static List<System> systems = new ArrayList<System>();
 
     static {
-        persons.add(new Person("Bill", "Gates"));
-        persons.add(new Person("Steve", "Jobs"));
+        systems.add(new System("Bill", "Gates"));
+        systems.add(new System("Steve", "Jobs"));
     }
 
     @RequestMapping(value = { "/", "/index" }, method = RequestMethod.GET)
@@ -32,7 +31,7 @@ public class MainController {
     @RequestMapping(value = { "/personList" }, method = RequestMethod.GET)
     public String viewPersonList(Model model) {
 
-        model.addAttribute("persons", persons);
+        model.addAttribute("system", systems);
 
         return "personList";
     }
@@ -40,9 +39,25 @@ public class MainController {
     @RequestMapping(value = { "/login" }, method = RequestMethod.GET)
     public String viewLogin(Model model) {
 
-        model.addAttribute("persons", persons);
+        model.addAttribute("system", systems);
 
         return "login";
     }
+
+
+    @RequestMapping(value = { "/home" }, method = RequestMethod.GET)
+    public String homePage(Model model) {
+        return "homePage";
+    }
+
+
+    @RequestMapping(value = { "/contactus" }, method = RequestMethod.GET)
+    public String contactusPage(Model model) {
+        model.addAttribute("address", "Vietnam");
+        model.addAttribute("phone", "...");
+        model.addAttribute("email", "...");
+        return "contactusPage";
+    }
+
 
 }

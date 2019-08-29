@@ -1,15 +1,15 @@
-package com.example.management.person;
+package com.example.management.system;
 
-public class Person {
+public class System {
 
     private String firstName;
     private String lastName;
 
-    public Person() {
+    public System() {
 
     }
 
-    public Person(String firstName, String lastName) {
+    public System(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }

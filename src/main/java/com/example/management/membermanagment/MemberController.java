@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/members")
@@ -29,5 +30,15 @@ public class MemberController {
     @PostMapping
     public void addMember(@RequestBody MemberDto dto) {
         memberService.saveMembers(dto);
+    }
+
+    @PutMapping("/{id}")
+    public void updateMember(@RequestBody MemberEntity memberEntity,@PathVariable Long id) {
+        memberService.updateMember(memberEntity,id);
+    }
+
+    @GetMapping("/{id}")
+    public MemberEntity getMemberById(@PathVariable Long id) {
+        return memberService.getMemberById(id);
     }
 }

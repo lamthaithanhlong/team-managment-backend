@@ -1,15 +1,15 @@
 package com.example.management.system;
 
-public class System {
+public class SystemEntity {
 
     private String firstName;
     private String lastName;
 
-    public System() {
+    public SystemEntity() {
 
     }
 
-    public System(String firstName, String lastName) {
+    public SystemEntity(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }

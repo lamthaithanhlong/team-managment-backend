@@ -27,11 +27,21 @@
         <put-attribute name="body" value="/WEB-INF/jsp/bodyfragments/_contactus.jsp" />
     </definition>
 
-    <!-- Login Page -->
+    <!-- Person List Page -->
     <definition name="loginPage" extends="base.definition">
         <put-attribute name="title" value="Login" />
-        <put-attribute name="body" value="/WEB-INF/jsp/bodyfragments/_login.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/bodyfragments/login.jsp" />
     </definition>
 
+    <!-- Dashboard Page -->
+    <definition name="dashboardPage" extends="base.definition">
+        <put-attribute name="title" value="Dashboard" />
+        <put-attribute name="body" value="/WEB-INF/jsp/bodyfragments/dashboard.jsp" />
+    </definition>
 
+    <!-- Person List Page -->
+    <definition name="personListPage" extends="base.definition">
+        <put-attribute name="title" value="Person List" />
+        <put-attribute name="body" value="/WEB-INF/jsp/bodyfragments/personList.jsp" />
+    </definition>
 </tiles-definitions>

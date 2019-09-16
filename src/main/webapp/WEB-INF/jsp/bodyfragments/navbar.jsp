@@ -4,12 +4,14 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.1.3/css/bootstrap.min.css" />
-    <c:url value="/css/navbar.css" var="navbarCss" />
+    <c:url value="/static/css/navbar.css" var="navbarCss" />
     <link href="${navbarCss}" rel="stylesheet" />
-    <c:url value="/css/main.css" var="jstlCss" />
+    <c:url value="/static/css/main.css" var="jstlCss" />
     <link href="${jstlCss}" rel="stylesheet" />
     <meta charset="UTF-8" />
     <title>Welcome</title>
+    <link rel="stylesheet" type="text/css"
+          href="${pageContext.request.contextPath}/static/css/style.css"/>
     <link rel="stylesheet" type="text/css"
           href="${pageContext.request.contextPath}/static/css/style.css"/>
 </head>
@@ -48,13 +50,6 @@
         </div>
     </div>
 </nav>
-<h1>Welcome</h1>
-<h2>${message}</h2>
-
-
-
-<a href="${pageContext.request.contextPath}/personList">Person List</a>
-<a href="${pageContext.request.contextPath}/login">Login</a>
 
 </body>
 

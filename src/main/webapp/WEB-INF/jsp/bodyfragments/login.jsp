@@ -4,7 +4,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.1.3/css/bootstrap.min.css" />
-    <c:url value="/static/css/main.css" var="jstlCss" />
+    <c:url value="./static/css/main.css" var="jstlCss" />
     <link href="${jstlCss}" rel="stylesheet" />
     <meta charset="UTF-8" />
     <title>Person List</title>
